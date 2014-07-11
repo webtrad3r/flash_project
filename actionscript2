@@ -1,0 +1,305 @@
+// main window where the text content is loaded, including scrollbar
+
+function tekst(panou)
+{
+   switch(panou)
+   {
+      case "_up":
+         input_txt.txt.scroll = input_txt.txt.scroll - 1;
+         break;
+      case "_down":
+         input_txt.txt.scroll = input_txt.txt.scroll + 1;
+         break;
+   }
+   trace(panou);
+}
+
+// main menu including the buttons, using the unload function before loading the new page resulting in removing the conflict for 
+the update of the flash movie and loading the new page
+
+function baza_de_date(nr)
+{
+   switch(nr)
+   {
+      case 1:
+         acasa.loadMovie("en_home.swf");
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = false;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("filme");
+         unloadMovie("fotografii");
+         unloadMovie("sunama");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         break;
+      case 2:
+         input_txt.txt.text = "Loading...";
+         loadVariables("txt/en_bio.txt",input_txt.txt);
+         _up.enabled = true;
+         _up._visible = true;
+         _down.enabled = true;
+         _down._visible = true;
+         input_txt._visible = true;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("fotografii");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         input_txt.gotoAndPlay(1);
+         break;
+      case 3:
+         input_txt.txt.text = "Loading...";
+         loadVariables("txt/en_news.txt",input_txt.txt);
+         _up.enabled = true;
+         _up._visible = true;
+         _down.enabled = true;
+         _down._visible = true;
+         input_txt._visible = true;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("fotografii");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         input_txt.gotoAndPlay(1);
+         break;
+      case 4:
+         input_txt.txt.text = "Loading...";
+         loadVariables("txt/en_downloads.txt",input_txt.txt);
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = true;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("fotografii");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         downloads.gotoAndPlay("click");
+         input_txt.gotoAndPlay(1);
+         break;
+      case 5:
+         input_txt.txt.text = "Loading...";
+         loadVariables("txt/en_press.txt",input_txt.txt);
+         _up.enabled = true;
+         _up._visible = true;
+         _down.enabled = true;
+         _down._visible = true;
+         input_txt._visible = true;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("fotografii");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         input_txt.gotoAndPlay(1);
+         break;
+      case 6:
+         filme.loadMovie("video_player.swf");
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = false;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("fotografii");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         break;
+      case 7:
+         sunama.loadMovie("contact.swf");
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = false;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("filme");
+         unloadMovie("fotografii");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         break;
+      case 8:
+         input_txt.txt.text = "Loading...";
+         loadVariables("txt/en_programs.txt",input_txt.txt);
+         _up.enabled = true;
+         _up._visible = true;
+         _down.enabled = true;
+         _down._visible = true;
+         input_txt._visible = true;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("fotografii");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         input_txt.gotoAndPlay(1);
+         break;
+      case 9:
+         fotografii.loadMovie("photos.swf");
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = false;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         break;
+      case 10:
+         input_txt.txt.text = "Loading...";
+         klip.loadMovie("links.swf");
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = false;
+         unloadMovie("fotografii");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         input_txt.gotoAndPlay(1);
+         break;
+      case 11:
+         audioplayer.loadMovie("audio_player.swf");
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = false;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("fotografii");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         break;
+      case 12:
+         input_txt.txt.text = "Loading...";
+         loadVariables("txt/en_repertoire.txt",input_txt.txt);
+         _up.enabled = true;
+         _up._visible = true;
+         _down.enabled = true;
+         _down._visible = true;
+         input_txt._visible = true;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("fotografii");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         input_txt.gotoAndPlay(1);
+         break;
+      case 13:
+         fotografii_slav.loadMovie("madaphotos.swf");
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = false;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("fotografii");
+         unloadMovie("filme_slav");
+         unloadMovie("audioplayer");
+         break;
+      case 14:
+         filme_slav.loadMovie("madavideos.swf");
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = false;
+         unloadMovie("duo");
+         unloadMovie("klip");
+         unloadMovie("fotografii");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         unloadMovie("filme");
+         break;
+      case 15:
+         input_txt.txt.text = "Loading...";
+         klip.loadMovie("duo.swf");
+         _up.enabled = false;
+         _up._visible = false;
+         _down.enabled = false;
+         _down._visible = false;
+         input_txt._visible = false;
+         unloadMovie("fotografii");
+         unloadMovie("filme");
+         unloadMovie("sunama");
+         unloadMovie("acasa");
+         unloadMovie("filme_slav");
+         unloadMovie("fotografii_slav");
+         unloadMovie("audioplayer");
+         input_txt.gotoAndPlay(1);
+         break;
+   }
+}
+stop(); //stop movie from looping
+acasa.loadMovie("en_home.swf"); // loading the homepage with preloader
+_up.enabled = false;
+_up._visible = false;
+_down.enabled = false;
+_down._visible = false;
+_up.useHandCursor = true;
+_down.useHandCursor = true;
+input_txt._visible = false;
+stop();
+mouseListener = new Object();
+mouseListener.onMouseWheel = function(delta, target)
+{
+   if(target == input_txt.txt || target._parent == input_txt.txt)
+   {
+      input_txt.txt.scroll = input_txt.txt.scroll - delta;
+   }
+};
+Mouse.addListener(mouseListener);
